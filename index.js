@@ -34,11 +34,16 @@ Do the following:
 
    HINT: no function required
 */
-var myName ="Chris"
-var myName2 = "James"
-if (myName2==="James") {
-  console.log(myName="CJ");
+var firstVar = "Chris";
+var secondVar = "Ramirez";
+
+if (secondVar==="Ramirez"){
+  console.log(firstVar="James");
 }
+else if (secondVar!="Ramirez"){
+  console.log(firstVar="Michael");
+}
+
 
 
 
@@ -122,13 +127,13 @@ Use the hungryDog function and feeding requirements below to do the following:
 */  
 
 function hungryDog(weight,age){
-    if(age >= (2/12) && age <= (4/12)){
+    if(age >= (1/6) && age <= (1/3)){
       return weight * .1;
     }
-    else if (age >=(4/12) && age <=(7/12)){
+    else if (age >=(1/3) && age <=(7/12)){
       return weight * .05;
     }
-    else if (age >=(7/12) && age <=1){
+    else if (age >=(7/12) && age <1){
       return weight * .04;
     }
     else if (age >= 1) {
@@ -147,6 +152,7 @@ function hungryDog(weight,age){
     }
   }
 
+  hungryDog(15,1)
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -227,9 +233,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(KM){
+    return (KM*0.621371);
   }
+  console.log (miles(5));
 
 
 
@@ -241,9 +248,11 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(CM){
+    return (CM/30.48);
   }
+  console.log (feet(30.48));
+  
  
 
 
@@ -257,10 +266,14 @@ Using the annoyingSong function below do the following:
       "{number} bottles of soda on the wall, {number} bottles of soda, take one down pass it around {number left over} bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(number){
+
+  for (i = number; i > 0; i--) {
+    console.log(`${i}  bottles of soda on the wall, ${i} bottles of soda, take one down pass it around ${i -1}bottles of soda on the wall`);
   }
 
+  }
+console.log(annoyingSong(5));
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -277,9 +290,25 @@ Using the grade function below do the following:
    below should return 'you got an F'
 */
   
-function grade(/*Your Code here */){
-  /*Your Code here */
+function grade(score){
+  if(score >= 90 && score <= 100) {
+    return ("you got an A");
   }
+  else if (score >= 80 && score <= 89){
+    return ("you got a B");
+  }
+  else if(score >=70 && score <=79){
+    return ("you got a C");
+  }
+  else if(score >=60 && score <=69){
+    return ("you got a D");
+  }
+  else if(score < 60){
+    return ("you got an F");
+  }
+}
+grade(93);
+
   
   
 
