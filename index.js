@@ -18,6 +18,10 @@ Do the following:
    HINT: no function required
 */
 
+var votingAge = 18
+if(votingAge>=18) {
+  console.log(true);
+}
 
 
 /*
@@ -30,7 +34,11 @@ Do the following:
 
    HINT: no function required
 */
-
+var myName ="Chris"
+var myName2 = "James"
+if (myName2==="James") {
+  console.log(myName="CJ");
+}
 
 
 
@@ -46,6 +54,10 @@ Do the following:
    HINT: look up the Number method
 */
 
+var dateofBirth="1999" 
+            {
+  console.log(parseInt(dateofBirth))
+}
 
 
 
@@ -58,9 +70,11 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+
+function multiply(num1,num2){
+    return num1 * num2;
   }
+  multiply(4,5)
 
 
 
@@ -74,10 +88,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(DogY){
+    return DogY*7;
 }
-
+dogYears (20);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -107,10 +121,31 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight,age){
+    if(age >= (2/12) && age <= (4/12)){
+      return weight * .1;
+    }
+    else if (age >=(4/12) && age <=(7/12)){
+      return weight * .05;
+    }
+    else if (age >=(7/12) && age <=1){
+      return weight * .04;
+    }
+    else if (age >= 1) {
+      if(weight <= 5) {
+        return weight * .05;
+      }
+      else if(weight >= 6 && weight <=10){
+        return weight * .04;
+      }
+      else if (weight >= 11 && weight <= 15){
+        return weight * .03;
+      }
+      else if(weight > 15){
+        return weight * .02;
+      }
+    }
   }
-
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -134,10 +169,51 @@ Use the game function below to do the following:
   HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
 
-function game(user, computer){
-    /*add your code here*/
-}
-  
+
+    var computer = Math.random();
+    if (computer <= 1 && computer > 0.666666) {
+      var computer ="Paper";
+    }
+    else if(computer <= 0.666666 && computer > 0.333334) {
+      var computer ="Rock";
+    }
+    else if(computer <= 0.333333){
+      var computer ="Scissors";
+    }
+
+    function game(user, computer){
+      if (computer === "Rock" && user === "Rock") {
+        return "it's a tie";
+      }
+      else if (computer ==="Rock" && user === "Scissors") {
+        return "you lose!";
+      }
+      else if (computer ==="Rock" && user === "Paper") {
+        return "you win!";
+      }
+      else if (computer === "Scissors" && user === "Scissors") {
+        return "it's a tie";
+      }
+      else if (computer === "Scissors" && user === "Paper") {
+        return "you lose!";
+      }
+      else if (computer === "Scissors" && user === "Rock") {
+        return "you win!";
+      }
+      else if (computer === "Paper" && user === "Paper") {
+        return "it's a tie";
+      }
+      else if (computer === "Paper" && user === "Rock") {
+        return "you lose!";
+      }
+      else if (computer === "Paper" && user === "Scissors") {
+        return "you win!";
+      }
+    }
+
+    console.log(game("Rock",computer));
+    console.log(game("Paper",computer));
+    console.log(game("Scissors",computer));
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
